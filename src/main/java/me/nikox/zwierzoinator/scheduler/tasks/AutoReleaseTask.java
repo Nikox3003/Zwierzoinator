@@ -1,8 +1,7 @@
 package me.nikox.zwierzoinator.scheduler.tasks;
 
-import lombok.SneakyThrows;
-import me.nikox.zwierzoinator.init.Bootstrap;
-import me.nikox.zwierzoinator.init.DatabaseInitializer;
+import me.nikox.zwierzoinator.boot.Bootstrap;
+import me.nikox.zwierzoinator.boot.DatabaseInitializer;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.*;
@@ -12,7 +11,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.time.Instant;
-import java.util.Objects;
 
 import static me.nikox.zwierzoinator.VariableHolder.*;
 

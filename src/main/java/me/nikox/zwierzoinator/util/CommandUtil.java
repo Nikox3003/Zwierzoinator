@@ -1,6 +1,6 @@
 package me.nikox.zwierzoinator.util;
 
-import me.nikox.zwierzoinator.init.Bootstrap;
+import me.nikox.zwierzoinator.boot.Bootstrap;
 import net.dv8tion.jda.api.entities.*;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.exceptions.ErrorResponseException;

@@ -1,6 +1,6 @@
 package me.nikox.zwierzoinator.util;
 
-import me.nikox.zwierzoinator.init.FileInitializer;
+import me.nikox.zwierzoinator.boot.FileInitializer;
 import me.nikox.zwierzoinator.objects.Variable;
 import net.dv8tion.jda.api.entities.MessageChannel;
 

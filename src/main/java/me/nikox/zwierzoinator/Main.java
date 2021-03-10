@@ -1,12 +1,10 @@
 package me.nikox.zwierzoinator;
 
-import me.nikox.zwierzoinator.init.Bootstrap;
-import me.nikox.zwierzoinator.objects.Entry;
-import net.dv8tion.jda.api.entities.Message;
+import me.nikox.zwierzoinator.boot.Bootstrap;
 
 public class Main {
 
     public static void main(String[] args) {
-        Bootstrap.start();
+        Bootstrap.load();
     }
 }

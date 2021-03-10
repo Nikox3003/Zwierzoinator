@@ -1,7 +1,7 @@
 package me.nikox.zwierzoinator.scheduler.tasks;
 
 import lombok.SneakyThrows;
-import me.nikox.zwierzoinator.init.DatabaseInitializer;
+import me.nikox.zwierzoinator.boot.DatabaseInitializer;
 
 import java.sql.Statement;
 

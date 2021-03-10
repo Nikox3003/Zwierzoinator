@@ -1,7 +1,7 @@
 package me.nikox.zwierzoinator.commands;
 
 import me.nikox.zwierzoinator.VariableHolder;
-import me.nikox.zwierzoinator.init.DatabaseInitializer;
+import me.nikox.zwierzoinator.boot.DatabaseInitializer;
 import me.nikox.zwierzoinator.objects.Command;
 import me.nikox.zwierzoinator.util.CommandUtil;
 import me.nikox.zwierzoinator.util.MessageUtil;
@@ -21,7 +21,6 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-import java.util.Locale;
 
 public class CzasCommand extends Command {
 

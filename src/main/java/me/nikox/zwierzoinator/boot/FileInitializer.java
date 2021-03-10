@@ -1,9 +1,8 @@
-package me.nikox.zwierzoinator.init;
+package me.nikox.zwierzoinator.boot;
 
 import me.nikox.zwierzoinator.util.PropertiesWrapper;
 
 import javax.naming.ConfigurationException;
-import java.io.FileNotFoundException;
 import java.util.Properties;
 
 public class FileInitializer {

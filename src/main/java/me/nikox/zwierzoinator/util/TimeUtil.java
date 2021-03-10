@@ -4,6 +4,7 @@ public class TimeUtil {
 
     public enum Unit {
 
+        MILLIS("ms", 0),
         SECONDS("s", 1000L),
         MINUTES("m", 60000L),
         HOURS("h", 3600000L),

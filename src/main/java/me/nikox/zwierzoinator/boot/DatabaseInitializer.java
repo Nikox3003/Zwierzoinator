@@ -1,15 +1,13 @@
-package me.nikox.zwierzoinator.init;
+package me.nikox.zwierzoinator.boot;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import me.nikox.zwierzoinator.VariableHolder;
 import me.nikox.zwierzoinator.objects.Entry;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 
 public class DatabaseInitializer {
 
@@ -19,8 +17,11 @@ public class DatabaseInitializer {
     public static void load() throws SQLException {
         hikariConfig = new HikariConfig();
         String jdbcUrl = FileInitializer.getConfig().getProperty("database.url");
-        String username = FileInitializer.getConfig().getProperty("database.user");
+        String username = FileInitializer.getConfig().getProperty("database.username");
         String password = FileInitializer.getConfig().getProperty("database.password");
+        hikariConfig.setJdbcUrl(jdbcUrl);
+        hikariConfig.setUsername(username);
+        hikariConfig.setPassword(password);
         hikariConfig.addDataSourceProperty("cachePrepStmts", true);
         hikariConfig.addDataSourceProperty("prepStmtCacheSize", 250);
         hikariConfig.addDataSourceProperty("prepStmtCacheSqlLimit", 2048);

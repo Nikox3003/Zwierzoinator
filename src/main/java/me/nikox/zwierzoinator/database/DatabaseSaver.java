@@ -1,7 +1,7 @@
 package me.nikox.zwierzoinator.database;
 
 import com.zaxxer.hikari.HikariDataSource;
-import me.nikox.zwierzoinator.init.DatabaseInitializer;
+import me.nikox.zwierzoinator.boot.DatabaseInitializer;
 import me.nikox.zwierzoinator.objects.Entry;
 
 import java.sql.Connection;

@@ -3,8 +3,10 @@ package me.nikox.zwierzoinator;
 import me.nikox.zwierzoinator.commands.ValueCommand;
 import me.nikox.zwierzoinator.objects.Command;
 import me.nikox.zwierzoinator.objects.Entry;
+import net.dv8tion.jda.api.entities.Invite;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
+import net.dv8tion.jda.api.entities.TextChannel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,10 +32,13 @@ public class VariableHolder {
 
 
     public static HashMap<String, String> autoResponseList = new HashMap<>();
+    public static HashMap<String, Integer> inviteList = new HashMap<>();
     public static List<Command> commandList = new ArrayList<>();
     public static List<Member> igrzyskaMembers = new ArrayList<>();
     public static List<Entry> entryList = new ArrayList<>();
+    public static List<Entry> escapeAttempsList = new ArrayList<>();
 
+    public static List<TextChannel> szobChannels = new ArrayList<>();
     public static boolean szobMode = false;
     public static int registeredEscapeAttemps;
 
@@ -68,18 +73,18 @@ public class VariableHolder {
             543218757317820417L,
     };
 
-    public static long[] colorIds = {
-            708024626168463472L,
-            708025056412041258L,
-            708025652967899266L,
-            708025659552956487L,
-            708026007608885248L,
-            708026070892544033L,
-            708026353487970305L,
-            708026490687848509L,
-            708026587760820296L,
-            708026534769852456L,
-    };
+//    public static long[] colorIds = {
+//            708024626168463472L,
+//            708025056412041258L,
+//            708025652967899266L,
+//            708025659552956487L,
+//            708026007608885248L,
+//            708026070892544033L,
+//            708026353487970305L,
+//            708026490687848509L,
+//            708026587760820296L,
+//            708026534769852456L,
+//    };
 
     public static String[] genericShipResponses = {
             "Ej stary, popatrz na górę. Widzisz to? Ten ship? Kto takie chore rzeczy wymyśla?",
@@ -88,4 +93,5 @@ public class VariableHolder {
     };
 
     public static List<Role> rolesToRemove = new ArrayList<>();
+    public static List<String> szobEmoteList = new ArrayList<>();
 }

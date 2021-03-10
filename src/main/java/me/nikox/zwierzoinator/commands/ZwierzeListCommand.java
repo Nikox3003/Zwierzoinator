@@ -23,7 +23,7 @@ public class ZwierzeListCommand extends Command {
         List<Member> list = guild.getMembersWithRoles(zwierze);
         StringBuilder b = new StringBuilder("Lista zwierzat:\n\n");
         for(Member m : list){
-            b.append(m.getUser().getAsTag()).append("\n");
+            b.append(m.getUser().getAsMention()).append("\n");
         }
         e.getChannel().sendMessage(b.toString()).queue();
 

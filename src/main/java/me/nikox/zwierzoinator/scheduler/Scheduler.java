@@ -36,12 +36,28 @@ public class Scheduler {
         return task;
     }
 
-    public static Task scheduleRepeatingTask(Runnable run, long delay, long period, TimeUnit unit) {
-        Task task = new Task(run, scheduledTasks.size() + 1);
+    public static Task scheduleTask(Task task, long delay, TimeUnit unit) {
+        task.setId(scheduledTasks.size() + 1);
         Runnable r = () -> {
-            run.run();
+            task.run();
             Scheduler.getScheduledTasks().remove(task);
         };
+        task.setExecutor(scheduler.schedule(r, delay, unit));
+        scheduledTasks.add(task);
+        return task;
+    }
+
+    public static Task scheduleRepeatingTask(Runnable run, long delay, long period, TimeUnit unit) {
+        Task task = new Task(run, scheduledTasks.size() + 1);
+        Runnable r = run::run;
+        task.setExecutor(scheduler.scheduleAtFixedRate(r, delay, period, unit));
+        scheduledTasks.add(task);
+        return task;
+    }
+
+    public static Task scheduleRepeatingTask(Task task, long delay, long period, TimeUnit unit) {
+        task.setId(scheduledTasks.size() + 1);
+        Runnable r = task::run;
         task.setExecutor(scheduler.scheduleAtFixedRate(r, delay, period, unit));
         scheduledTasks.add(task);
         return task;

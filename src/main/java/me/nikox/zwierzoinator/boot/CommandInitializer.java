@@ -1,8 +1,7 @@
-package me.nikox.zwierzoinator.init;
+package me.nikox.zwierzoinator.boot;
 
 import me.nikox.zwierzoinator.commands.*;
 import me.nikox.zwierzoinator.objects.Command;
-import me.nikox.zwierzoinator.ship_module.ShipCommand;
 
 import java.util.ArrayList;
 
@@ -18,7 +17,6 @@ public class CommandInitializer {
         //registerCommand(new IgrzyskaCommand());
         registerCommand(new AutoResponseCommand());
         registerCommand(new CzasCommand());
-        registerCommand(new SzobModeCommand());
         registerCommand(new SayCommand());
         registerCommand(new EmojiCommand());
         registerCommand(new StatsCommand());
@@ -27,6 +25,7 @@ public class CommandInitializer {
         registerCommand(new ValueCommand());
         registerCommand(new FixRolesCommand());
         registerCommand(new SwitchCommand());
+        registerCommand(new UserCheckerCommand());
     }
 
 

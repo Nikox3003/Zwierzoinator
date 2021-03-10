@@ -1,13 +1,12 @@
 package me.nikox.zwierzoinator.commands;
 
-import me.nikox.zwierzoinator.init.DatabaseInitializer;
+import me.nikox.zwierzoinator.boot.DatabaseInitializer;
 import me.nikox.zwierzoinator.objects.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
-import java.awt.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;

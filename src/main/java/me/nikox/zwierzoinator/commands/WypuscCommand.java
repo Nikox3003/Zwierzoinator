@@ -1,9 +1,8 @@
 package me.nikox.zwierzoinator.commands;
 
 import me.nikox.zwierzoinator.VariableHolder;
-import me.nikox.zwierzoinator.init.DatabaseInitializer;
+import me.nikox.zwierzoinator.boot.DatabaseInitializer;
 import me.nikox.zwierzoinator.objects.Command;
-import me.nikox.zwierzoinator.objects.Variable;
 import me.nikox.zwierzoinator.util.CommandUtil;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.Permission;
